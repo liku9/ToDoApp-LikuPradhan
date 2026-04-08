@@ -5,7 +5,7 @@ const ToDoList = ({ todos, onDelete, onToggle, onEdit }) => {
   return (
     <section className="todo-section">
       {todos.length === 0 ? (
-        <p className="no-task">List is empty !</p>
+        <p className="no-task">No Task here !</p>
       ) : (
         <ul className="todo-list">
           {todos.map((todo) => (
