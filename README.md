@@ -64,7 +64,7 @@ http://localhost:5173/
 
 ## 📸 Preview
 
-![App Screenshot](./src/assets/screenshot.png)
+![App screenshot](./src/assets/screenshot.png)
 
 ---
 
