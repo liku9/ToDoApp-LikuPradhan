@@ -5,25 +5,41 @@
 }
 
 body {
-  margin:0;
+  margin: 0;
   height: 100vh;
   overflow: hidden;
   position: relative;
-  background: radial-gradient(ellipse at bottom, #11217c, #bd1df2);
-   display: flex;
+
+  display: flex;
   justify-content: center;
-  /* align-items: flex-start; */
   padding-top: 20px;
+
+  
 }
 
-/* Bubbles layer 1 */
+/* ✅ Blur Background Layer */
 body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: url("./assets/bg-todo2.jpg") no-repeat ;
+   background-size: cover; 
+  filter: blur(3px);
+  transform: scale(1.1); 
+  z-index: -2; 
+}
+
+/* ✅ Bubbles Layer 1 */
+body::after {
   content: "";
   position: absolute;
   width: 10px;
   height: 10px;
+
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
+
   box-shadow:
     50px 100vh,
     150px 90vh,
@@ -33,17 +49,20 @@ body::before {
     750px 92vh,
     900px 97vh,
     1100px 88vh;
+
   animation: bubbleUp 5s linear infinite;
+  z-index: -1;
 }
 
-/* Bubbles layer 2 */
-body::after {
-  content: "";
+/* ✅ Extra bubbles (optional div use karo better control ke liye) */
+.bubbles {
   position: absolute;
   width: 6px;
   height: 6px;
+
   background: rgba(255, 255, 255, 0.15);
   border-radius: 50%;
+
   box-shadow:
     100px 100vh,
     250px 95vh,
@@ -52,7 +71,9 @@ body::after {
     700px 85vh,
     850px 92vh,
     1000px 96vh;
+
   animation: bubbleUp 10s linear infinite;
+  z-index: -1;
 }
 
 /* Animation */
@@ -161,7 +182,7 @@ body::after {
 
 .todo-item:hover {
   transform: scale(1.01);
-  background: rgb(136, 211, 220);
+  background: rgb(207, 231, 167);
 }
 
 .edit-input {
