@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import Header from "./Components/Header";
 import TodoList from "./Components/ToDoList";
-import { MdAddCircle } from "react-icons/md";
+import { MdLibraryAdd } from "react-icons/md";
 
 const App = () => {
   // Step 1: Main state of todos
@@ -55,11 +55,11 @@ const App = () => {
         <input
           type="text"
           ref={inputRef}
-          placeholder="Add your todo..."
+          placeholder="Add Your Task..."
           className="input-box"
         />
         <button type="submit" className="btn">
-          <MdAddCircle />
+          <MdLibraryAdd />
         </button>
       </form>
 
